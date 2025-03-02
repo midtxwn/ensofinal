@@ -1,0 +1,10 @@
+#1
+mkdir -p Repositorio/{Proyectos/Prj1,Procesos/"Control de Cambios"}  #-p crea subdirectorios anidados
+cd Repositorio 
+git init
+
+#2
+touch historia.txt log.txt
+#anhadir base del proyecto
+git add .
+git commit -m "Base del proyecto. Versión V1 del documento de Control de Cambios."
