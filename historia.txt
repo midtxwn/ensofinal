@@ -11,3 +11,62 @@ git commit -m "Base del proyecto. Versión V1 del documento de Control de Cambio
 
 #3
 git tag Rev1
+
+#4 
+git branch Mejoras
+git checkout Mejoras
+#incluir fichero de mejoras .pdf
+git add Procesos/Control\ de\ Cambios/DP_ControldeCambios_Grupo2_1-v1_2.pdf
+git commit -m "Propuesta de mejoras anhadidas"
+
+#5 
+#reescribir v1 con contenido de v2
+git add .
+git commit -m "Actualizar Control de Cambios a V2"
+
+#6
+git log --oneline >> log.txt
+
+#7
+git checkout master
+#no nos deja porque modificamos historia
+git stash push -k
+git checkout master
+#modificar documento word
+git add Procesos/Control\ de\ Cambios/DP_ControldeCambios_Grupo2_1-v1.doc
+git commit -m "Primer cambio en rama main (modificacion de Documento V1)"
+git checkout Mejoras
+git rebase master
+#resolver conflictos (coger la version propia de Mejoras y meterla en working directory)
+git add Procesos/Control\ de\ Cambios/DP_ControldeCambios_Grupo2_1-v1.doc
+git rebase --continue
+
+#8
+git log --oneline >> log.txt
+
+#9
+git checkout master
+#no nos deja por modificar la historia
+git stash push -k
+git checkout master
+git merge Mejoras
+git branch -d Mejoras
+git log --oneline >> log.txt
+
+
+#10
+git rm Procesos/Control\ de\ Cambios/DP_ControldeCambios_Grupo2_1-v1_2.pdf
+
+#11
+git tag Rev2
+
+#12
+#añadimos la version V3
+git add Procesos/Control\ de\ Cambios/DP_ControldeCambios_Grupo2_1-v1.doc
+git commit -m "Actualizacion a version V3"
+
+#13
+git reset --hard HEAD
+git .
+git commit -m "V3 con plantillas correctas"
+git tag Rev3
