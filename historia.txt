@@ -70,3 +70,27 @@ git reset --hard HEAD
 git .
 git commit -m "V3 con plantillas correctas"
 git tag Rev3
+
+#14
+git remote add origin https://github.com/midtxwn/ensofinal.git
+git push -u origin master --tags
+
+#15
+git pull origin master
+
+#16
+git diff HEAD historia.txt
+
+#17
+git log --oneline >> log.txt
+
+#18
+git push origin master
+
+#19 
+git checkout -b Entrega-final
+git push -u origin Entrega-final
+
+
+#20
+PULL REQUEST

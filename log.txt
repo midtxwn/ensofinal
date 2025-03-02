@@ -1,0 +1,6 @@
+ac934f1 V3 con plantillas correctas
+22c803e Actualizacion a version V3
+36b888c Actualizar Control de Cambios a V2
+4ce001f Propuesta de mejoras anhadidas
+a9705e8 Primer cambio en rama main (modificacion de Documento V1)
+e5fe9ea Base del proyecto. Versión V1 del documento de Control de Cambios.
