@@ -8,3 +8,6 @@ touch historia.txt log.txt
 #anhadir base del proyecto
 git add .
 git commit -m "Base del proyecto. Versión V1 del documento de Control de Cambios."
+
+#3
+git tag Rev1
